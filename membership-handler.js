@@ -23,6 +23,7 @@ function handleMembershipPage($) {
             customer: {
                 name: $(this.first_name).val() + ' ' + $(this.last_name).val(),
                 email: $(this.email).val(),
+                phone: $(this.phone).val(),
                 address: {
                     line1: $(this.address_line_1).val(),
                     line2: $(this.address_line_2).val(),
