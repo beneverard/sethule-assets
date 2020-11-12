@@ -1,6 +1,6 @@
 function handleDonatePage($) {
 
-    console.log('Running handleDonatePage()');
+    console.log('RurequestBodynning handleDonatePage()');
     
     var stripe = Stripe('pk_live_51HdyBKDhz7tkkLlhA2nImoUTUhTMcmf33GnhNzmIV1ThIhvfUkXADZKjSZvxPES8PTmHAEDflThXLxE6oAufCiXc00jbhGEDPH');
 
@@ -8,22 +8,27 @@ function handleDonatePage($) {
     var $strapline = $('#donation-strapline');
 
     // prepare all of the static request values
-    var requestBody = {};
+    var requestBody = {
+        payment: {},
+        checkout: {},
+        customer: {},
+        meta: {}
+    };
 
     // ensure we have the correct query string and update the strapline
     if (urlParams.has('single')) {
 
-        requestBody.frequency = 'single';
-        requestBody.amount = parseFloat(urlParams.get('single'));
-        requestBody.product = 'prod_IHjys2JljYyzqm';
+        requestBody.payment.frequency = 'single';
+        requestBody.payment.amount = parseFloat(urlParams.get('single'));
+        requestBody.payment.product = 'prod_IHjys2JljYyzqm';
 
         $strapline.html('Single donation amount: £' + urlParams.get('single'));
 
     } else if (urlParams.has('monthly')) {
 
-        requestBody.frequency = 'recurring';
-        requestBody.amount = parseFloat(urlParams.get('monthly'));
-        requestBody.product = 'prod_IHjyGAp5Mcvw8s';
+        requestBody.payment.frequency = 'recurring';
+        requestBody.payment.amount = parseFloat(urlParams.get('monthly'));
+        requestBody.payment.product = 'prod_IHjyGAp5Mcvw8s';
 
         $strapline.html('Monthly donation amount: £' + urlParams.get('monthly'));
 
@@ -43,14 +48,13 @@ function handleDonatePage($) {
             requestBody.amount += 0.50;
         }
         
-        requestBody.currency = $(this.currency).val();
-        requestBody.interval = $(this.interval).val();
-        requestBody.cancel_url = $(this.cancel_url).val();
-        requestBody.success_url = $(this.success_url).val();
-        requestBody.first_name = $(this.first_name).val();
-        requestBody.last_name = $(this.last_name).val();
-        requestBody.email = $(this.email).val();
-        requestBody.gift_aid = $(this.gift_aid).prop('checked');
+        requestBody.payment.currency = $(this.currency).val();
+        requestBody.payment.interval = $(this.interval).val();
+        requestBody.checkout.cancel_url = $(this.cancel_url).val();
+        requestBody.checkout.success_url = $(this.success_url).val();
+        requestBody.customer.name = $(this.first_name).val() + ' ' + $(this.last_name).val();
+        requestBody.customer.email = $(this.email).val();
+        requestBody.meta.gift_aid = $(this.gift_aid).prop('checked');
 
         $.ajax({
             url: "https://stripe-donation-worker.theideabureau.co/api/checkout/MO7A6p5qrFfSkbXo",
