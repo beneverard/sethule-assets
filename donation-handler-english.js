@@ -45,7 +45,7 @@ function handleDonatePage($) {
         
         // increase the amount if the user has opted to cover the fees
         if ($(this.cover_fees).prop('checked')) {
-            requestBody.amount += 0.50;
+            requestBody.payment.amount += 0.50;
         }
         
         requestBody.payment.currency = $(this.currency).val();
