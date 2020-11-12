@@ -57,7 +57,7 @@ function handleDonatePage($) {
         requestBody.meta.gift_aid = $(this.gift_aid).prop('checked');
 
         $.ajax({
-            url: "https://stripe-donation-worker.theideabureau.co/api/checkout/kLWxtz2ZTckjhQUX",
+            url: "https://stripe-donation-worker.theideabureau.co/api/checkout/coSANnEP5sk2ONLJ",
             method: 'POST',
             data: requestBody,
             accepts: {
