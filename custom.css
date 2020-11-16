@@ -4,7 +4,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-
 /* Setting the nav icon to white when it's the homepage */
 .home .menu-button__icon {
     color: white;
@@ -16,7 +15,6 @@ body {
 
 /* Sets the dropdown menu colour to red on the homepage / mobile */
 .home .dropdown-toggle,
-.home .nav-link,
 .home .dropdown-toggle-link {
 	color: white;
 	background-color:#ae0b11;
@@ -50,7 +48,18 @@ body {
     background-color: #a21217;
 }
 
+.home .navbar {
+  background-color: #ae0b11;
+  border-radius: 0;
+}
+
+
 @media all and (min-width: 990px) {
+    .home .navbar {
+      background-color: none;
+      border-radius: 0;
+    }
+    
     .dropdown-link.w--current {
         border-style: none;
         border-width: 0px;
@@ -61,7 +70,6 @@ body {
     }
     
     .home .dropdown-toggle,
-    .home .nav-link,
     .home .dropdown-toggle-link {
         color: white;
         background-color: #0000;
@@ -192,7 +200,6 @@ body {
         -webkit-mask-size: 100%;
       }
 }
-
 
 *[data-mask="square-image"] {
   mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f871deb0dadccf095c6c258_mask-square-image.svg);  
