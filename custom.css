@@ -1,1 +1,251 @@
 /* Custom.css */
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Setting the nav icon to white when it's the homepage */
+.home .menu-button__icon {
+    color: white;
+}
+
+/* Sets the dropdown menu colour to red on the homepage / mobile */
+.home .dropdown-toggle,
+.home .nav-link {
+	color: white;
+	background-color:#ae0b11;
+}
+
+.home .dropdown-list {
+    background-color: #ae0b11;
+    color: white;
+}
+
+.home .dropdown-link {
+    border-color: white;
+    color: white;
+}
+
+.dropdown-link.w--current {
+    border-style: none none none solid;
+    border-width: 0px 0px 0px 2px;
+    border-color: #ae0b11;
+}
+
+.home .header-donate-button {
+    background-color: white;
+}
+
+.home .header-donate-button__label {
+    color: #ae0b11;
+}
+
+.home .nav-menu {
+    background-color: #a21217;
+}
+
+@media all and (min-width: 990px) {
+    .dropdown-link.w--current {
+        border-style: none;
+        border-width: 0px;
+    }    
+
+    .home .nav-menu {
+        background-color: #0000;
+    }
+    
+    .home .dropdown-toggle,
+    .home .nav-link {
+        color: white;
+        background-color: #0000
+    }
+  
+  	.home .nav-link:hover {
+          color: white;
+  	}
+
+    .home .dropdown-list {
+        background-color: white;
+        color: #ae0b11;
+    }
+
+    .home .dropdown-link {
+        color: #ae0b11;
+    }
+
+    .home .header-donate-button {
+        background-color: white;
+		color: #ae0b11;
+    }
+    .home .header-donate-button__icon,
+    .home .header-donate-button__label {
+        color: #ae0b11;
+    } 
+}
+
+/* Switches a different colour logo on the homepage */
+.home .logo {
+    background-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f3682e1e484ac4315c78cb0_logo-white.min.svg);
+}
+
+/* Loads in the mask only when on the desktop breakpoint */
+@media all and (min-width: 1278px) {
+
+    *[data-mask="2col-hero-img"] {
+        mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c92aef800a07861fa110d_mask-2col-hero.svg);  
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c92aef800a07861fa110d_mask-2col-hero.svg);  
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: cover;
+      }
+
+
+}
+
+*[data-mask="blob"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c446931ccfc361a6b13a5_mask-blob.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c446931ccfc361a6b13a5_mask-blob.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 95%;
+}
+
+*[data-mask="donate-card"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c52015d12a757850bd369_mask-donate-card.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c52015d12a757850bd369_mask-donate-card.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+  
+*[data-mask="image-slider"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c552b90573b458a1e6470_mask-image-slider.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c552b90573b458a1e6470_mask-image-slider.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+
+*[data-mask="image-slider-desc"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c565913c5326fd509a10f_mask-image-slider-desc.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c565913c5326fd509a10f_mask-image-slider-desc.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+
+*[data-mask="alt-donations"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c699b27992b37c75dbc68_mask-alt-donations.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c699b27992b37c75dbc68_mask-alt-donations.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+}
+  
+/* Only show the mask above landscape mobile */
+@media all and (min-width: 568px) {
+
+    *[data-mask="project-card"] {
+        mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c955b828bb9ea025077fa_mask-project-card.svg);  
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c955b828bb9ea025077fa_mask-project-card.svg);  
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: 100%;
+      }      
+
+      *[data-mask="project-card-desc"] {
+        mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c96fe28ca069bf2c06c96_mask-project-card-desc.svg);  
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f7c96fe28ca069bf2c06c96_mask-project-card-desc.svg);  
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: 100%;
+      }
+}
+
+
+*[data-mask="square-image"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f871deb0dadccf095c6c258_mask-square-image.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f871deb0dadccf095c6c258_mask-square-image.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+
+*[data-mask="team-image"] {
+	mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f871deb0dadccf095c6c258_mask-square-image.svg);  
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	-webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f871deb0dadccf095c6c258_mask-square-image.svg);  
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: 100%;
+  }
+
+*[data-mask="tall-image"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f881e57a669adb77d0a0cbe_mask-tall-image.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f881e57a669adb77d0a0cbe_mask-tall-image.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+  
+*[data-mask="mask-video"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f9ad86d3b2dc14502e92a28_mask-video.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f9ad86d3b2dc14502e92a28_mask-video.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+  
+*[data-mask="intro-video"] {
+  mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f9ad86d3b2dc14502e92a28_mask-video.svg);  
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f9ad86d3b2dc14502e92a28_mask-video.svg);  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100%;
+}
+
+blockquote {
+    border: solid transparent;
+    border-width: 0 0 0 9px;
+	border-image: url(https://uploads-ssl.webflow.com/5f3150ff6a2b9d9db6a380eb/5f86f67cca3bcc64ec3e0c9c_left-border.min.svg) 1;
+  }
+  
