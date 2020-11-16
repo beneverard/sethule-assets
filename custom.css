@@ -10,9 +10,14 @@ body {
     color: white;
 }
 
+.dropdown-toggle-link {
+	color:#ae0b11;
+}
+
 /* Sets the dropdown menu colour to red on the homepage / mobile */
 .home .dropdown-toggle,
-.home .nav-link {
+.home .nav-link,
+.home .dropdown-toggle-link {
 	color: white;
 	background-color:#ae0b11;
 }
@@ -56,9 +61,10 @@ body {
     }
     
     .home .dropdown-toggle,
-    .home .nav-link {
+    .home .nav-link,
+    .home .dropdown-toggle-link {
         color: white;
-        background-color: #0000
+        background-color: #0000;
     }
   
   	.home .nav-link:hover {
