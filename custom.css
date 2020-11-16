@@ -48,17 +48,7 @@ body {
     background-color: #a21217;
 }
 
-.home .navbar {
-  background-color: #ae0b11;
-  border-radius: 0;
-}
-
-
 @media all and (min-width: 990px) {
-    .home .navbar {
-      background-color: none;
-      border-radius: 0;
-    }
     
     .dropdown-link.w--current {
         border-style: none;
