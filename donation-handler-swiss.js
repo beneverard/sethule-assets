@@ -22,7 +22,7 @@ function handleDonatePage($) {
         requestBody.payment.amount = parseFloat(urlParams.get('single'));
         requestBody.payment.product = 'prod_IHkAwfMUX0Eq30';
 
-        $strapline.html('Single donation amount: CHF' + urlParams.get('single'));
+        $strapline.html($strapline.data('donate-single') + ': CHF' + urlParams.get('single'));
 
     } else if (urlParams.has('monthly')) {
 
@@ -30,7 +30,7 @@ function handleDonatePage($) {
         requestBody.payment.amount = parseFloat(urlParams.get('monthly'));
         requestBody.payment.product = 'prod_IHk9LXGK9S4W2T';
 
-        $strapline.html('Monthly donation amount: CHF' + urlParams.get('monthly'));
+        $strapline.html($strapline.data('donate-monthly') + ': CHF' + urlParams.get('monthly'));
 
     } else {
 
